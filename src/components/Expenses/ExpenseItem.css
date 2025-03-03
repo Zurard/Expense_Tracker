@@ -1,0 +1,130 @@
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border-radius: 12px;
+  background-color: #4b4b4b;
+}
+
+.expense-item .date {
+  color: #df02f8;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #44068b;
+  border: 1px solid #ececec;
+  padding: 0.5rem;
+  border-radius: 12px;
+}
+
+.expense-Item-Description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-end;
+  flex-flow: column-reverse;
+  justify-content: flex-start;
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.expense-Item-Description h2 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  flex: 1;
+  margin: 0 1rem;
+  text-align: left;
+}
+
+.Expense-item-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #40005d;
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 12px;
+}
+
+.cool-button {
+  background-color: #800080; /* Purple background */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  cursor:grab;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.cool-button:hover {
+  background-color: #ff69b4; 
+   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}  
+
+
+
+.cool-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cool-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+} 
+
+ .cool-button:focus:not(:active)::after {
+  animation: ripple 1s ease-out;
+} 
+
+ @keyframes ripple {
+  0% {
+      transform: scale(0, 0);
+      opacity: 1;
+  }
+  20% {
+      transform: scale(25, 25);
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      transform: scale(40, 40);
+  }
+}
+
+@media (min-width: 580px) {
+  .expense-Item-Description {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+   .expense-Item-Description h2 {
+    font-size: 1.25rem;
+  } 
+
+  .Expense-item-price {
+    font-size: 1.25rem;
+    padding: 0.5rem 1.5rem;
+  }
+}

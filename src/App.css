@@ -1,0 +1,41 @@
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #970f8e;
+  margin-top: 0;
+  padding-top: 50px;
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #4f124b;
+  border-radius: 15px;
+}
+
+.app-title {
+  color: #e410c8;
+  background-color: rgb(66, 1, 66);
+  border: #020001;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 2.5rem;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.app-title span {
+  color: #ef00df;
+}
+
+.expenses-container {
+  background-color: #d7a4d3;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
